@@ -1,4 +1,5 @@
 backend/golang/main/main
 backend/geoip_lookup_golang
+backend/data/
 test/geoip_lookup_golang
 .idea/

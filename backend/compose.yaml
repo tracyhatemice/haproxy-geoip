@@ -1,0 +1,19 @@
+services:
+  geoip-lookup:
+    build: .
+    container_name: geoip-lookup-service
+    ports:
+      - "127.0.0.1:6970:6970"
+    volumes:
+      # Mount directory containing MMDB files
+      # Place your .mmdb files in ./data directory on host
+      - ./data:/tmp:ro
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6970/?lookup=country&ip=8.8.8.8"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
