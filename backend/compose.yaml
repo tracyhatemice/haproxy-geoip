@@ -1,5 +1,6 @@
 services:
   geoip-lookup:
+    image: tracyhatemice/geoip-lookup:1.0.0
     build: .
     container_name: geoip-lookup-service
     ports:
