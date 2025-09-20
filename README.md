@@ -16,7 +16,7 @@ You can implement this in two ways:
 
 * Use a custom backend-service to do this lookups
  
-   [Go-based binary](https://github.com/O-X-L/geoip-lookup-service/releases/tag/1.0)
+   [Go-based binary](https://github.com/tracyhatemice/gogeoip-lookup/releases/tag/1.0)
 
    [Python3-based](https://github.com/O-X-L/haproxy-geoip/tree/latest/backend)
 
@@ -32,7 +32,7 @@ You can implement this in two ways:
 
 3. LUA calls a minimal web-service on localhost that queries the GeoIP-database(s)
 
-   You can either use a [Go-based](https://github.com/O-X-L/geoip-lookup-service) or [Python3-based](https://github.com/O-X-L/haproxy-geoip/tree/latest/backend) HTTP-Server as backend
+   You can either use a [Go-based](https://github.com/tracyhatemice/gogeoip-lookup) or [Python3-based](https://github.com/O-X-L/haproxy-geoip/tree/latest/backend) HTTP-Server as backend
 
 <img src="https://raw.githubusercontent.com/O-X-L/haproxy-geoip/latest/topology.svg" width=300>
 
@@ -128,9 +128,9 @@ By utilizing [HAProxy's ipmask](https://www.haproxy.com/blog/ip-masking-in-hapro
 
 #### via Go-Backend
 
-Download the binary for you system from [the releases](https://github.com/O-X-L/geoip-lookup-service/releases).
+Download the binary for you system from [the releases](https://github.com/tracyhatemice/gogeoip-lookup/releases).
 
-[Read the documentation](https://github.com/O-X-L/geoip-lookup-service) on how to use it.
+[Read the documentation](https://github.com/tracyhatemice/gogeoip-lookup) on how to use it.
 
 You need to use the `lua/geoip_lookup_w_backend.lua` script.
 
